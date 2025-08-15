@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoDaily - Latest Cryptocurrency News & Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CryptoDaily</div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#markets">Markets</a></li>
+                    <li><a href="#defi">DeFi</a></li>
+                    <li><a href="#nft">NFTs</a></li>
+                    <li><a href="#analysis">Analysis</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <article class="hero-card hero-card-large">
+                    <div class="hero-image bg-bitcoin-chart"></div>
+                    <div class="hero-content">
+                        <span class="hero-tag">CRYPTO</span>
+                        <h2 class="hero-title"><a href="#">Bitcoin Surges Past $100K as Institutional Adoption Accelerates</a></h2>
+                        <div class="hero-meta">
+                            <span>DEC 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="hero-card">
+                    <div class="hero-image bg-defi-trading"></div>
+                    <div class="hero-content">
+                        <span class="hero-tag">DEFI</span>
+                        <h3 class="hero-title"><a href="#">DeFi TVL Reaches New All-Time High of $300B</a></h3>
+                        <div class="hero-meta">
+                            <span>DEC 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="hero-card">
+                    <div class="hero-image bg-nft-market"></div>
+                    <div class="hero-content">
+                        <span class="hero-tag">NFT</span>
+                        <h3 class="hero-title"><a href="#">NFT Market Shows Signs of Recovery</a></h3>
+                        <div class="hero-meta">
+                            <span>DEC 14, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="hero-card">
+                    <div class="hero-image bg-regulation"></div>
+                    <div class="hero-content">
+                        <span class="hero-tag">REGULATION</span>
+                        <h3 class="hero-title"><a href="#">SEC Approves Multiple Crypto ETFs</a></h3>
+                        <div class="hero-meta">
+                            <span>DEC 14, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-card">
+                    <div class="hero-image bg-ethereum"></div>
+                    <div class="hero-content">
+                        <span class="hero-tag">ETHEREUM</span>
+                        <h3 class="hero-title"><a href="#">Ethereum 2.0 Upgrade Complete</a></h3>
+                        <div class="hero-meta">
+                            <span>DEC 13, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <div class="container">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <span class="trending-number">01</span>
+                    <div class="trending-content">
+                        <h3><a href="#">Ethereum 3.0 Roadmap Revealed</a></h3>
+                        <p>Major scalability improvements ahead</p>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <span class="trending-number">02</span>
+                    <div class="trending-content">
+                        <h3><a href="#">SEC Approves New Crypto ETFs</a></h3>
+                        <p>Market sees massive inflows</p>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <span class="trending-number">03</span>
+                    <div class="trending-content">
+                        <h3><a href="#">DeFi TVL Hits New Record</a></h3>
+                        <p>$300B locked across protocols</p>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <span class="trending-number">04</span>
+                    <div class="trending-content">
+                        <h3><a href="#">Solana Network Upgrade</a></h3>
+                        <p>Transaction speeds increase 10x</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Trending Section -->
+
+    <!-- Latest News -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Business News</h2>
+                <a href="#" class="view-all">View All →</a>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-tag">BITCOIN</span>
+                        <h3 class="news-title"><a href="#">Major Banks Now Offering Bitcoin Custody Services</a></h3>
+                        <p class="news-excerpt">Traditional financial institutions embrace cryptocurrency as demand soars...</p>
+                        <div class="news-meta">
+                            <span>Dec 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-tag">DEFI</span>
+                        <h3 class="news-title"><a href="#">Uniswap V4 Launch Brings Revolutionary Features</a></h3>
+                        <p class="news-excerpt">The latest iteration promises lower fees and enhanced liquidity management...</p>
+                        <div class="news-meta">
+                            <span>Dec 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-tag">REGULATION</span>
+                        <h3 class="news-title"><a href="#">EU Passes Comprehensive Crypto Framework</a></h3>
+                        <p class="news-excerpt">New regulations aim to protect investors while fostering innovation...</p>
+                        <div class="news-meta">
+                            <span>Dec 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-tag">ALTCOINS</span>
+                        <h3 class="news-title"><a href="#">Solana Ecosystem Sees Explosive Growth</a></h3>
+                        <p class="news-excerpt">New projects and partnerships drive SOL to new heights this quarter...</p>
+                        <div class="news-meta">
+                            <span>Dec 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- End Latest News -->
+
+    <!-- Featured Stories Section with Black Background -->
+    <section class="featured-stories">
+        <div class="container">
+            <div class="hero-grid">
+            <article class="hero-card hero-card-large">
+                <div class="hero-image"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">CRYPTO</span>
+                    <h2 class="hero-title"><a href="#">Bitcoin Surges Past $100K as Institutional Adoption Accelerates</a></h2>
+                    <div class="hero-meta">
+                        <span>DEC 15, 2024</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="hero-card">
+                <div class="hero-image"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">DEFI</span>
+                    <h3 class="hero-title"><a href="#">DeFi TVL Reaches New All-Time High of $300B</a></h3>
+                    <div class="hero-meta">
+                        <span>DEC 15, 2024</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="hero-card">
+                <div class="hero-image"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">NFT</span>
+                    <h3 class="hero-title"><a href="#">NFT Market Shows Signs of Recovery</a></h3>
+                    <div class="hero-meta">
+                        <span>DEC 14, 2024</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="hero-card">
+                <div class="hero-image"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">REGULATION</span>
+                    <h3 class="hero-title"><a href="#">SEC Approves Multiple Crypto ETFs</a></h3>
+                    <div class="hero-meta">
+                        <span>DEC 14, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hero-card">
+                <div class="hero-image"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">ETHEREUM</span>
+                    <h3 class="hero-title"><a href="#">Ethereum 2.0 Upgrade Complete</a></h3>
+                    <div class="hero-meta">
+                        <span>DEC 13, 2024</span>
+                    </div>
+                </div>
+            </article>
+            
+            </div>
+        </div>
+    </section>
+    <!-- End Featured Stories Section -->
+
+    <!-- Popular Posts Section -->
+    <section class="popular-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Posts</h2>
+            </div>
+            <div class="popular-grid">
+                <!-- Bitcoin News Column -->
+                <div class="popular-column">
+                    <div class="column-header">
+                        <h3>Bitcoin News</h3>
+                    </div>
+                    <article class="popular-card main-post">
+                        <div class="popular-image"></div>
+                        <div class="popular-content">
+                            <span class="popular-tag lifestyle">BITCOIN</span>
+                            <h3 class="popular-title"><a href="#">Bitcoin Mining Difficulty Reaches All-Time High</a></h3>
+                            <div class="popular-meta">
+                                <span>DEC 12, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <div class="popular-list">
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag lifestyle">BITCOIN</span>
+                                <h4><a href="#">El Salvador Sees Economic Growth with Bitcoin Strategy</a></h4>
+                                <div class="item-meta">DEC 11, 2024</div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag lifestyle">BITCOIN</span>
+                                <h4><a href="#">MicroStrategy Acquires Additional 10,000 BTC</a></h4>
+                                <div class="item-meta">DEC 10, 2024</div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag lifestyle">BITCOIN</span>
+                                <h4><a href="#">Bitcoin Halving Event: What to Expect in 2024</a></h4>
+                                <div class="item-meta">DEC 9, 2024</div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag lifestyle">BITCOIN</span>
+                                <h4><a href="#">Lightning Network Capacity Surpasses 5,000 BTC</a></h4>
+                                <div class="item-meta">DEC 8, 2024</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Popular Post Column -->
+                <div class="popular-column center-column">
+                    <div class="column-header">
+                        <h3>Popular Post</h3>
+                    </div>
+                    <div class="popular-list center-list">
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag business">DEFI</span>
+                                <h4><a href="#">Aave V3 Protocol Live on Mainnet</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag travel">NFT</span>
+                                <h4><a href="#">Bored Ape Yacht Club Announces Metaverse Expansion</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag lifestyle">ETHEREUM</span>
+                                <h4><a href="#">Vitalik Buterin Proposes New EIP for Sharding</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag business">REGULATION</span>
+                                <h4><a href="#">US Treasury Releases Stablecoin Report</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag business">WEB3</span>
+                                <h4><a href="#">Web3 Gaming on the Rise with Play-to-Earn Models</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag sports">CRYPTO</span>
+                                <h4><a href="#">Crypto.com Secures Naming Rights for LA Arena</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag travel">METAVERSE</span>
+                                <h4><a href="#">Decentraland Hosts First-Ever Metaverse Fashion Week</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag business">DAO</span>
+                                <h4><a href="#">DAOs: The Future of Corporate Governance?</a></h4>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image round"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag travel">SECURITY</span>
+                                <h4><a href="#">How to Keep Your Crypto Safe from Scammers</a></h4>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Altcoin News Column -->
+                <div class="popular-column">
+                    <div class="column-header">
+                        <h3>Altcoin News</h3>
+                    </div>
+                    <article class="popular-card main-post">
+                        <div class="popular-image"></div>
+                        <div class="popular-content">
+                            <span class="popular-tag tech">ALTCOIN</span>
+                            <h3 class="popular-title"><a href="#">Cardano's Hydra Upgrade Promises Massive Scalability</a></h3>
+                            <div class="popular-meta">
+                                <span>DEC 12, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <div class="popular-list">
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag tech">SOLANA</span>
+                                <h4><a href="#">Solana Pay Integrates with Major E-commerce Platforms</a></h4>
+                                <div class="item-meta">DEC 11, 2024</div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag tech">POLKADOT</span>
+                                <h4><a href="#">Polkadot Parachain Auctions See Record Participation</a></h4>
+                                <div class="item-meta">DEC 10, 2024</div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag tech">AVALANCHE</span>
+                                <h4><a href="#">Avalanche Subnets Gain Traction for Custom Blockchains</a></h4>
+                                <div class="item-meta">DEC 9, 2024</div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-item">
+                            <div class="popular-item-image"></div>
+                            <div class="popular-item-content">
+                                <span class="popular-tag tech">CHAINLINK</span>
+                                <h4><a href="#">Chainlink 2.0: The Future of Oracles</a></h4>
+                                <div class="item-meta">DEC 8, 2024</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Popular Posts Section -->
+
+    <!-- Analysis Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Blockchain & DeFi</h2>
+                <a href="#" class="view-all">More Related News →</a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class.="news-tag">ANALYSIS</span>
+                        <h3 class="news-title"><a href="#">Why This Bull Run Is Different From 2021</a></h3>
+                        <p class="news-excerpt">Institutional adoption and regulatory clarity mark a new era for crypto...</p>
+                        <div class="news-meta">
+                            <span>Dec 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-tag">OPINION</span>
+                        <h3 class="news-title"><a href="#">The Future of Cross-Chain Interoperability</a></h3>
+                        <p class="news-excerpt">How blockchain bridges are evolving to connect isolated ecosystems...</p>
+                        <div class="news-meta">
+                            <span>Dec 14, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-tag">DEEP DIVE</span>
+                        <h3 class="news-title"><a href="#">Understanding Layer 2 Solutions</a></h3>
+                        <p class="news-excerpt">A comprehensive guide to scaling solutions and their impact...</p>
+                        <div class="news-meta">
+                            <span>Dec 13, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-tag">MARKET INSIGHT</span>
+                        <h3 class="news-title"><a href="#">Central Bank Digital Currencies Impact</a></h3>
+                        <p class="news-excerpt">How CBDCs will reshape the global financial landscape and crypto adoption...</p>
+                        <div class="news-meta">
+                            <span>Dec 12, 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- End Analysis Section -->
+
+    <!-- Additional Articles Section -->
+    <section class="additional-articles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ethereum & NFTs</h2>
+            </div>
+            <div class="modern-articles-container">
+                <!-- Left Column - Featured Post -->
+                <div class="modern-main-posts">
+                    <!-- Featured Post -->
+                    <article class="modern-featured-post">
+                        <div class="modern-image-container">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop" alt="Bitcoin trading concept with golden coins">
+                        </div>
+                        <div class="modern-featured-content">
+                            <span class="modern-tag crypto">CRYPTO</span>
+                            <h2><a href="#">Bitcoin Institutional Adoption Accelerates as Major Banks Enter Market</a></h2>
+                            <div class="modern-meta">
+                                <span>SEP 12, 2023</span> - <span>0 COMMENTS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Single Grid Post -->
+                    <article class="modern-single-post">
+                        <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600&auto=format&fit=crop" alt="DeFi trading interface">
+                        <div class="modern-single-post-content">
+                            <span class="modern-tag defi">DEFI</span>
+                            <h3><a href="#">DeFi Protocols Hit $250B Total Value Locked</a></h3>
+                            <p>Decentralized finance continues its explosive growth as institutional investors embrace the technology, bringing unprecedented liquidity and innovation to traditional financial services...</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Right Column (Sidebar) -->
+                <div class="modern-sidebar-posts">
+                    <article class="modern-sidebar-post">
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop" alt="Ethereum blockchain visualization">
+                        <div class="modern-sidebar-post-content">
+                            <span class="modern-tag altcoin">ALTCOIN</span>
+                            <h3><a href="#">Ethereum 2.0 Staking Reaches New Milestone</a></h3>
+                            <p>Over 18 million ETH now staked as the network prepares for major upgrades...</p>
+                        </div>
+                    </article>
+
+                    <article class="modern-sidebar-post">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&auto=format&fit=crop" alt="Financial regulation concept">
+                        <div class="modern-sidebar-post-content">
+                            <span class="modern-tag regulation">REGULATION</span>
+                            <h3><a href="#">New Crypto Regulations Take Effect</a></h3>
+                            <p>Latest regulatory framework provides clarity for institutional adoption across major markets...</p>
+                        </div>
+                    </article>
+
+                     <article class="modern-sidebar-post">
+                        <img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=600&auto=format&fit=crop" alt="NFT marketplace on a screen">
+                        <div class="modern-sidebar-post-content">
+                            <span class="modern-tag nft">NFT</span>
+                            <h3><a href="#">The Rise of Dynamic NFTs in Gaming</a></h3>
+                            <p>How NFTs that change based on gameplay are revolutionizing the industry...</p>
+                        </div>
+                    </article>
+
+                     <article class="modern-sidebar-post">
+                        <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600&auto=format&fit=crop" alt="Person using a crypto wallet on their phone">
+                        <div class="modern-sidebar-post-content">
+                            <span class="modern-tag security">SECURITY</span>
+                            <h3><a href="#">Best Practices for Securing Your Crypto Assets</a></h3>
+                            <p>A guide to protecting your investments from hacks and theft...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Additional Articles Section -->
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 CryptoDaily. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+// Article-specific JavaScript functionality

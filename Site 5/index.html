@@ -4,422 +4,429 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsHub - Breaking News & Updates</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header */
-        header {
-            background: #111;
-            border-bottom: 1px solid #222;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ff3333;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ff3333;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            background: #1a1a1a;
-            border-radius: 4px;
-            padding: 0.5rem 1rem;
-        }
-
-        .search-bar input {
-            background: none;
-            border: none;
-            color: #e0e0e0;
-            outline: none;
-            width: 200px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d1818 100%);
-            padding: 4rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, #ff3333, #ff6666);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #b0b0b0;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #ff3333;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .cta-button:hover {
-            background: #ff5555;
-        }
-
-        .hero-image {
-            background: #222;
-            height: 400px;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-image::after {
-            content: "BREAKING NEWS";
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: #ff3333;
-            color: white;
-            padding: 0.5rem 1rem;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 3rem 5%;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #fff;
-            border-left: 4px solid #ff3333;
-            padding-left: 1rem;
-        }
-
-        /* News Grid */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .news-card {
-            background: #151515;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #222;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 51, 51, 0.2);
-        }
-
-        .news-image {
-            width: 100%;
-            height: 200px;
-            background: #222;
-            position: relative;
-        }
-
-        .category-tag {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: #ff3333;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
-            border-radius: 3px;
-            font-weight: bold;
-        }
-
-        .news-content {
-            padding: 1.5rem;
-        }
-
-        .news-content h3 {
-            margin-bottom: 0.8rem;
-            color: #fff;
-            font-size: 1.2rem;
-        }
-
-        .news-content p {
-            color: #999;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .news-meta {
-            display: flex;
-            justify-content: space-between;
-            color: #666;
-            font-size: 0.85rem;
-        }
-
-        /* Featured Section */
-        .featured-section {
-            background: #0f0f0f;
-            padding: 3rem 0;
-            margin: 3rem 0;
-        }
-
-        .featured-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-
-        .main-featured {
-            background: #1a1a1a;
-            border-radius: 8px;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .main-featured h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .sidebar-featured {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .sidebar-item {
-            background: #1a1a1a;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 3px solid #ff3333;
-        }
-
-        .sidebar-item h4 {
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar-item p {
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        /* Trending Section */
-        .trending-bar {
-            background: #ff3333;
-            color: white;
-            padding: 1rem 5%;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            overflow: hidden;
-        }
-
-        .trending-label {
-            font-weight: bold;
-            white-space: nowrap;
-        }
-
-        .trending-items {
-            display: flex;
-            gap: 3rem;
-            animation: scroll 20s linear infinite;
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Footer */
-        footer {
-            background: #0a0a0a;
-            border-top: 1px solid #222;
-            padding: 3rem 5%;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h4 {
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section a {
-            color: #999;
-            text-decoration: none;
-            display: block;
-            padding: 0.3rem 0;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: #ff3333;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid #222;
-            color: #666;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .featured-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Loading Animation */
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-    </style>
+    <meta name="description" content="Stay informed with the latest breaking news, business updates, technology trends, and global stories from NewsHub.">
+    <meta name="keywords" content="news, breaking news, business, technology, world news, analysis">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <!-- Skip link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
     <header>
-        <nav>
-            <a href="#" class="logo">NewsHub</a>
-            <ul class="nav-links">
-                <li><a href="#">World</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Entertainment</a></li>
-                <li><a href="#">Science</a></li>
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="logo">NewsHub</a>
+            <ul class="nav-links" role="menubar">
+                <li role="menuitem"><a href="#world" aria-label="World news section">World</a></li>
+                <li role="menuitem"><a href="#business" aria-label="Business news section">Business</a></li>
+                <li role="menuitem"><a href="#technology" aria-label="Technology news section">Technology</a></li>
+                <li role="menuitem"><a href="#sports" aria-label="Sports news section">Sports</a></li>
+                <li role="menuitem"><a href="#entertainment" aria-label="Entertainment news section">Entertainment</a></li>
+                <li role="menuitem"><a href="#science" aria-label="Science news section">Science</a></li>
             </ul>
-            <div class="search-bar">
-                <input type="text" placeholder="Search news...">
-                <span>🔍</span>
-            </div>
+            <form class="search-bar" role="search">
+                <input type="search" placeholder="Search news..." aria-label="Search news" required>
+                <button type="submit" aria-label="Submit search">🔍</button>
+            </form>
         </nav>
     </header>
 
-    <!-- Trending Bar -->
-    <div class="trending-bar">
-        <span class="trending-label">TRENDING:</span>
-        <div class="trending-items">
-            <span>Stock Market Hits Record High</span>
-            <span>Climate Summit 2025</span>
-            <span>Tech Giants Announce Merger</span>
-            <span>Olympics 2025 Updates</span>
-            <span>Stock Market Hits Record High</span>
-            <span>Climate Summit 2025</span>
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="hero">
+        <div class="hero-container">
+            <!-- Left Column (Main Feature) -->
+            <article class="hero-main">
+                <div class="hero-content">
+                    <h1>
+                        <a href="https://finance.yahoo.com/news/retail-market-analysis" class="hero-link">
+                            Target thinks it can keep growing sales, here's how the retailer will do it
+                        </a>
+                    </h1>
+                    <p class="hero-excerpt">It is a daily ritual for millions of Australians, but if you have noticed the price of your morning flat white or soy latte increase,...</p>
+                </div>
+                <div class="hero-meta">
+                    <span class="hero-category">BUSINESS</span>
+                    <span class="hero-date">March 4, 2022</span>
+                </div>
+                <div class="hero-bg-image">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=400&fit=crop&crop=center" alt="Target retail store exterior" loading="lazy">
+                </div>
+            </article>
+
+            <!-- Right Column (Top News Sidebar) -->
+            <aside class="hero-sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-line"></div>
+                    <h2>Top News</h2>
+                    <div class="sidebar-line"></div>
+                </div>
+                <div class="sidebar-articles">
+                    <article class="sidebar-item">
+                        <h3>
+                            <a href="https://science.org/atomic-bomb-research">
+                                A newfound quasicrystal formed in the first atomic bomb testesd in US
+                            </a>
+                        </h3>
+                        <div class="sidebar-meta">
+                            <span class="sidebar-category">SCIENCE</span>
+                            <span class="meta-divider">•</span>
+                            <span class="sidebar-date">March 4, 2022</span>
+                        </div>
+                    </article>
+                    <div class="sidebar-divider"></div>
+                    
+                    <article class="sidebar-item premium">
+                        <h3>
+                            <a href="https://nature.com/omicron-mutations-study">
+                                How omicron's mutations make it the most infectious coronavirus variant
+                            </a>
+                        </h3>
+                        <div class="sidebar-meta">
+                            <span class="sidebar-category">HEALTH</span>
+                            <span class="meta-divider">•</span>
+                            <span class="sidebar-date">March 4, 2022</span>
+                        </div>
+                    </article>
+                    <div class="sidebar-divider"></div>
+                    
+                    <article class="sidebar-item">
+                        <h3>
+                            <a href="https://nature.com/africa-fynbos-plants-study">
+                                Africa's fynbos plants hold their ground with the world's thinnest roots
+                            </a>
+                        </h3>
+                        <div class="sidebar-meta">
+                            <span class="sidebar-category">ENVIRONMENT</span>
+                            <span class="meta-divider">•</span>
+                            <span class="sidebar-date">March 4, 2022</span>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Breaking News Ticker -->
+    <div class="ticker-wrapper">
+        <div class="news-ticker">
+            <div class="ticker-container">
+                <div class="ticker-title" aria-label="Breaking news ticker">Breaking News</div>
+                <div class="ticker-content">
+                    <div class="ticker-text">
+                        <span class="ticker-item">
+                            <a href="https://reuters.com/breaking-crypto-regulation">SEC announces new cryptocurrency regulations affecting major exchanges</a>
+                        </span>
+                        <span class="ticker-item">
+                            <a href="https://bloomberg.com/tech-merger-announcement">Tech giants announce $50 billion merger in landmark deal</a>
+                        </span>
+                        <span class="ticker-item">
+                            <a href="https://bbc.com/climate-summit-agreement">World leaders reach historic climate agreement at emergency summit</a>
+                        </span>
+                        <span class="ticker-item">
+                            <a href="https://cnbc.com/market-volatility-update">Global markets experience significant volatility amid economic uncertainty</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Target thinks it can keep growing sales; here's how the retailer will do it</h1>
-                <p>Exclusive analysis reveals the retail giant's ambitious strategy for market dominance in 2025 and beyond.</p>
-                <a href="#" class="cta-button">Read Full Story</a>
+    <!-- Regional News Sections -->
+    <section class="regional-news" aria-label="Regional news coverage">
+        <div class="regional-container">
+            <!-- Africa Section -->
+            <div class="regional-column">
+                <div class="regional-header">
+                    <div class="regional-line"></div>
+                    <h2>Africa</h2>
+                    <div class="regional-line"></div>
+                </div>
+                <div class="regional-articles">
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://bbc.com/news/africa/economic-growth">
+                                Economic Growth Accelerates Across West African Nations
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Africa</span>
+                            <span class="regional-date">March 4, 2025</span>
+                        </div>
+                    </article>
+                    
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://reuters.com/africa/renewable-energy">
+                                Solar Energy Projects Transform Rural Communities
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Africa</span>
+                            <span class="regional-date">March 4, 2025</span>
+                        </div>
+                    </article>
+                    
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://aljazeera.com/africa/conservation">
+                                Wildlife Conservation Efforts Show Promising Results
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Africa</span>
+                            <span class="regional-date">March 3, 2025</span>
+                        </div>
+                    </article>
+                    
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://cnn.com/africa/technology-innovation">
+                                Tech Innovation Hubs Emerge in Major Cities
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Africa</span>
+                            <span class="regional-date">March 3, 2025</span>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="hero-image pulse"></div>
+
+            <!-- Europe Section -->
+            <div class="regional-column">
+                <div class="regional-header">
+                    <div class="regional-line"></div>
+                    <h2>Europe</h2>
+                    <div class="regional-line"></div>
+                </div>
+                <div class="regional-articles">
+                    <article class="regional-featured">
+                        <h3>
+                            <a href="https://euronews.com/politics/eu-climate-policy">
+                                European Union Unveils Ambitious Climate Action Plan
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Europe</span>
+                            <span class="regional-date">March 4, 2025</span>
+                        </div>
+                        <div class="regional-image">
+                            <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=250&fit=crop&crop=center" alt="European Parliament building with EU flags" loading="lazy">
+                        </div>
+                        <p class="regional-excerpt">New legislation aims to achieve carbon neutrality by 2030, with unprecedented investment in renewable energy infrastructure and green technology development.</p>
+                    </article>
+                    
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://reuters.com/europe/trade-agreements">
+                                New Trade Agreements Boost Economic Cooperation
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Europe</span>
+                            <span class="regional-date">March 4, 2025</span>
+                        </div>
+                        <p class="regional-excerpt">Strategic partnerships with Asian markets expected to increase trade volume by 25% over the next two years.</p>
+                    </article>
+                    
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://bbc.com/europe/digital-transformation">
+                                Digital Infrastructure Investment Reaches Record High
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Europe</span>
+                            <span class="regional-date">March 3, 2025</span>
+                        </div>
+                        <p class="regional-excerpt">€50 billion allocated for 5G networks and cybersecurity enhancement across member states.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Asia Section -->
+            <div class="regional-column">
+                <div class="regional-header">
+                    <div class="regional-line"></div>
+                    <h2>Asia</h2>
+                    <div class="regional-line"></div>
+                </div>
+                <div class="regional-articles">
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://reuters.com/asia/technology-breakthrough">
+                                Quantum Computing Breakthrough in Asian Research Labs
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Asia</span>
+                            <span class="regional-date">March 4, 2025</span>
+                        </div>
+                    </article>
+                    
+                    <div class="regional-ad">
+                        <div class="ad-content">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=200&fit=crop&crop=center" alt="Premium business newsletter" loading="lazy">
+                            <h4>Stay Informed</h4>
+                            <p>Get premium analysis delivered daily</p>
+                            <button class="ad-button">Subscribe Now</button>
+                        </div>
+                    </div>
+                    
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://nikkei.com/asia/manufacturing-surge">
+                                Manufacturing Sector Shows Strong Recovery
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Asia</span>
+                            <span class="regional-date">March 4, 2025</span>
+                        </div>
+                    </article>
+                    
+                    <article class="regional-article premium">
+                        <span class="premium-tag">Premium</span>
+                        <h3>
+                            <a href="https://ft.com/asia/financial-markets-analysis">
+                                Financial Markets Analysis: Asia-Pacific Outlook
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Asia</span>
+                            <span class="regional-date">March 3, 2025</span>
+                        </div>
+                    </article>
+                    
+                    <article class="regional-article">
+                        <h3>
+                            <a href="https://scmp.com/asia/sustainable-development">
+                                Sustainable Development Goals Progress Report
+                            </a>
+                        </h3>
+                        <div class="regional-meta">
+                            <span class="regional-category">Asia</span>
+                            <span class="regional-date">March 3, 2025</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business News Section -->
+    <section class="business-news">
+        <div class="business-container">
+            <div class="business-header">
+                <div class="business-line"></div>
+                <h2>Business</h2>
+                <div class="business-line"></div>
+            </div>
+            <div class="business-grid">
+                <article class="business-article">
+                    <div class="business-image">
+                        <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?w=300&h=200&fit=crop" alt="Stock market trading floor">
+                    </div>
+                    <div class="business-content">
+                        <h3>
+                            <a href="https://reuters.com/business/markets">
+                                Global Markets Rally as Economic Indicators Show Strength
+                            </a>
+                        </h3>
+                        <div class="business-meta">
+                            <span class="business-category">Markets</span>
+                            <span class="business-date">March 4, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="business-article">
+                    <div class="business-image">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=300&h=200&fit=crop" alt="Tech startup office">
+                    </div>
+                    <div class="business-content">
+                        <h3>
+                            <a href="https://bloomberg.com/technology/startups">
+                                Tech Startups Secure Record Funding in Q1 2025
+                            </a>
+                        </h3>
+                        <div class="business-meta">
+                            <span class="business-category">Technology</span>
+                            <span class="business-date">March 4, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="business-article">
+                    <div class="business-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=200&fit=crop" alt="Corporate building">
+                    </div>
+                    <div class="business-content">
+                        <h3>
+                            <a href="https://wsj.com/business/mergers">
+                                Major Corporate Merger Announced in Energy Sector
+                            </a>
+                        </h3>
+                        <div class="business-meta">
+                            <span class="business-category">Energy</span>
+                            <span class="business-date">March 4, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="business-article">
+                    <div class="business-image">
+                        <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=300&h=200&fit=crop" alt="Financial charts and graphs">
+                    </div>
+                    <div class="business-content">
+                        <h3>
+                            <a href="https://ft.com/business/economics">
+                                Federal Reserve Signals Potential Rate Changes
+                            </a>
+                        </h3>
+                        <div class="business-meta">
+                            <span class="business-category">Economics</span>
+                            <span class="business-date">March 3, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="business-article">
+                    <div class="business-image">
+                        <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=300&h=200&fit=crop" alt="International trade">
+                    </div>
+                    <div class="business-content">
+                        <h3>
+                            <a href="https://cnbc.com/international-trade">
+                                New Trade Agreements Boost International Commerce
+                            </a>
+                        </h3>
+                        <div class="business-meta">
+                            <span class="business-category">Trade</span>
+                            <span class="business-date">March 3, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="business-article">
+                    <div class="business-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" alt="Business professionals in meeting">
+                    </div>
+                    <div class="business-content">
+                        <h3>
+                            <a href="https://forbes.com/business/leadership">
+                                Corporate Leadership Trends Shaping 2025
+                            </a>
+                        </h3>
+                        <div class="business-meta">
+                            <span class="business-category">Leadership</span>
+                            <span class="business-date">March 3, 2025</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -452,184 +459,209 @@
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h2 class="section-title">Latest News</h2>
+        <!-- Main Content -->
+        <div class="container">
+        <h2 class="section-title" id="latest-news">Latest News</h2>
         <div class="news-grid">
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">POLITICS</span>
-                </div>
-                <div class="news-content">
-                    <h3>New Legislation to Address Ukraine, Zionist Entity, and Syria Conflicts</h3>
-                    <p>Congress debates comprehensive foreign policy package amid international tensions and humanitarian concerns.</p>
-                    <div class="news-meta">
-                        <span>John Smith</span>
-                        <span>3 hours ago</span>
+                <a href="https://reuters.com/politics/foreign-policy-legislation" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&h=200&fit=crop&crop=center" alt="Government building with flags representing international diplomacy" loading="lazy">
+                        <span class="category-tag">POLITICS</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>New Legislation to Address Ukraine, Zionist Entity, and Syria Conflicts</h3>
+                        <p>Congress debates comprehensive foreign policy package amid international tensions and humanitarian concerns.</p>
+                        <div class="news-meta">
+                            <span>March 25, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">TECH</span>
-                </div>
-                <div class="news-content">
-                    <h3>Eight things wins among 13 evening, after fire can delay most facility</h3>
-                    <p>Technology sector rebounds after initial setbacks, showing resilience in challenging market conditions.</p>
-                    <div class="news-meta">
-                        <span>Emma Davis</span>
-                        <span>5 hours ago</span>
+                <a href="https://techcrunch.com/technology-sector-recovery" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop&crop=center" alt="Modern technology data center with server equipment and networking infrastructure" loading="lazy">
+                        <span class="category-tag">TECH</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>Technology Sector Shows Resilience After Infrastructure Challenges</h3>
+                        <p>Technology sector rebounds after initial setbacks, showing resilience in challenging market conditions.</p>
+                        <div class="news-meta">
+                            <span>March 25, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">BUSINESS</span>
-                </div>
-                <div class="news-content">
-                    <h3>Meta pauses its most AI charity in Europe ahead of key market test</h3>
-                    <p>Social media giant reassesses artificial intelligence initiatives amid regulatory scrutiny and public concerns.</p>
-                    <div class="news-meta">
-                        <span>Michael Chen</span>
-                        <span>6 hours ago</span>
+                <a href="https://bloomberg.com/news/meta-ai-europe-regulations" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center" alt="Meta company headquarters building with modern glass architecture" loading="lazy">
+                        <span class="category-tag">BUSINESS</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>Meta pauses its most AI charity in Europe ahead of key market test</h3>
+                        <p>Social media giant reassesses artificial intelligence initiatives amid regulatory scrutiny and public concerns.</p>
+                        <div class="news-meta">
+                            <span>March 25, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">WORLD</span>
-                </div>
-                <div class="news-content">
-                    <h3>Rising temperatures affect harvests in multiple regions of the world</h3>
-                    <p>Climate change impacts global food security as agricultural yields decline in key producing regions.</p>
-                    <div class="news-meta">
-                        <span>Lisa Anderson</span>
-                        <span>8 hours ago</span>
+                <a href="https://bbc.com/news/climate-agriculture-impact" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=200&fit=crop&crop=center" alt="Agricultural farmland with crops affected by climate change and drought conditions" loading="lazy">
+                        <span class="category-tag">WORLD</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>Rising temperatures affect harvests in multiple regions of the world</h3>
+                        <p>Climate change impacts global food security as agricultural yields decline in key producing regions.</p>
+                        <div class="news-meta">
+                            <span>March 25, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">SCIENCE</span>
-                </div>
-                <div class="news-content">
-                    <h3>Breakthrough in cancer research offers new hope for patients</h3>
-                    <p>Medical researchers announce promising results from clinical trials of innovative treatment approach.</p>
-                    <div class="news-meta">
-                        <span>Dr. Robert Kim</span>
-                        <span>10 hours ago</span>
+                <a href="https://nature.com/articles/cancer-research-breakthrough" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop&crop=center" alt="Medical research laboratory with scientists conducting cancer research and testing" loading="lazy">
+                        <span class="category-tag">SCIENCE</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>Breakthrough in cancer research offers new hope for patients</h3>
+                        <p>Medical researchers announce promising results from clinical trials of innovative treatment approach.</p>
+                        <div class="news-meta">
+                            <span>March 24, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">SPORTS</span>
-                </div>
-                <div class="news-content">
-                    <h3>Championship finals deliver unexpected results and record viewership</h3>
-                    <p>Underdog victory captivates millions as streaming numbers reach unprecedented levels.</p>
-                    <div class="news-meta">
-                        <span>James Wilson</span>
-                        <span>12 hours ago</span>
+                <a href="https://espn.com/sports/championship-finals-results" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=200&fit=crop&crop=center" alt="Packed sports stadium with fans celebrating championship victory" loading="lazy">
+                        <span class="category-tag">SPORTS</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>Championship finals deliver unexpected results and record viewership</h3>
+                        <p>Underdog victory captivates millions as streaming numbers reach unprecedented levels.</p>
+                        <div class="news-meta">
+                            <span>March 24, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
         </div>
 
-        <h2 class="section-title">Analysis & Opinion</h2>
+        <h2 class="section-title" id="analysis-opinion">Analysis & Opinion</h2>
         <div class="news-grid">
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">OPINION</span>
-                </div>
-                <div class="news-content">
-                    <h3>The future of work: How AI is reshaping employment</h3>
-                    <p>Expert analysis on the transformation of labor markets and the skills needed for tomorrow's economy.</p>
-                    <div class="news-meta">
-                        <span>Prof. Maria Garcia</span>
-                        <span>1 day ago</span>
+                <a href="https://harvard.edu/research/ai-future-work-analysis" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=200&fit=crop&crop=center" alt="Modern office workspace with AI technology and digital transformation elements" loading="lazy">
+                        <span class="category-tag">OPINION</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>The future of work: How AI is reshaping employment</h3>
+                        <p>Expert analysis on the transformation of labor markets and the skills needed for tomorrow's economy.</p>
+                        <div class="news-meta">
+                            <span>March 24, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">ANALYSIS</span>
-                </div>
-                <div class="news-content">
-                    <h3>Economic indicators suggest shift in global trade patterns</h3>
-                    <p>Comprehensive review of international commerce trends and their implications for policy makers.</p>
-                    <div class="news-meta">
-                        <span>David Thompson</span>
-                        <span>1 day ago</span>
+                <a href="https://wsj.com/economics/global-trade-analysis" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center" alt="Global shipping containers and cargo ships representing international trade" loading="lazy">
+                        <span class="category-tag">ANALYSIS</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>Economic indicators suggest shift in global trade patterns</h3>
+                        <p>Comprehensive review of international commerce trends and their implications for policy makers.</p>
+                        <div class="news-meta">
+                            <span>March 24, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="news-card">
-                <div class="news-image">
-                    <span class="category-tag">EDITORIAL</span>
-                </div>
-                <div class="news-content">
-                    <h3>Why infrastructure investment is critical for economic growth</h3>
-                    <p>Editorial board examines the urgent need for modernization and sustainable development initiatives.</p>
-                    <div class="news-meta">
-                        <span>Editorial Board</span>
-                        <span>2 days ago</span>
+                <a href="https://washingtonpost.com/opinions/infrastructure-investment-growth" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=200&fit=crop&crop=center" alt="Modern infrastructure construction with bridges and sustainable development" loading="lazy">
+                        <span class="category-tag">EDITORIAL</span>
                     </div>
-                </div>
+                    <div class="news-content">
+                        <h3>Why infrastructure investment is critical for economic growth</h3>
+                        <p>Editorial board examines the urgent need for modernization and sustainable development initiatives.</p>
+                        <div class="news-meta">
+                            <span>March 23, 2025</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="news-card">
+                <a href="https://foreignaffairs.com/climate-security-geopolitics" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?w=400&h=200&fit=crop&crop=center" alt="Climate change effects on global security and international relations" loading="lazy">
+                        <span class="category-tag">ANALYSIS</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Climate Change and Global Security: The New Geopolitical Reality</h3>
+                        <p>In-depth analysis of how environmental challenges are reshaping international relations and defense strategies worldwide.</p>
+                        <div class="news-meta">
+                            <span>March 23, 2025</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="news-card">
+                <a href="https://sciencemag.org/renewable-energy-breakthrough" class="news-link">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=400&h=200&fit=crop&crop=center" alt="Solar panels and wind turbines representing renewable energy advancement" loading="lazy">
+                        <span class="category-tag">ANALYSIS</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Renewable Energy Breakthrough Reshapes Global Power Dynamics</h3>
+                        <p>Revolutionary battery technology promises to make renewable energy storage economically viable at scale.</p>
+                        <div class="news-meta">
+                            <span>March 22, 2025</span>
+                        </div>
+                    </div>
+                </a>
             </article>
         </div>
-    </div>
+        
+        <div class="pagination">
+            <button class="pagination-btn" id="prevBtn" disabled>Previous</button>
+            <div class="pagination-numbers">
+                <span class="page-number active" data-page="1">1</span>
+                <span class="page-number" data-page="2">2</span>
+                <span class="page-number" data-page="3">3</span>
+            </div>
+            <button class="pagination-btn" id="nextBtn">Next</button>
+        </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About NewsHub</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press Room</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Sections</h4>
-                <ul>
-                    <li><a href="#">World News</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">Technology</a></li>
-                    <li><a href="#">Science</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#">Newsletter</a></li>
-                    <li><a href="#">Mobile App</a></li>
-                    <li><a href="#">RSS Feeds</a></li>
-                    <li><a href="#">Archives</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="footer-bottom">
             <p>&copy; 2025 NewsHub. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

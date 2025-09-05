@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Templates - Master Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .template-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .template-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .template-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .template-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .template-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.2s;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #545b62;
+        }
+        .stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>News Templates Collection</h1>
+        <p>A comprehensive library of responsive HTML news website templates</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-number">9</div>
+        <p>Base Templates Available</p>
+        <small>Building towards 1000+ templates</small>
+    </div>
+
+    <h2>Base Templates</h2>
+    <div class="templates-grid">
+        <div class="template-card">
+            <div class="template-title">Site 1 - Classic News</div>
+            <div class="template-description">Traditional newspaper-style layout with clean typography and organized sections.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 1/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 1/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 2 - Modern Magazine</div>
+            <div class="template-description">Contemporary magazine-style layout with grid-based article display.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 2/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 2/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 3 - Tech Focus</div>
+            <div class="template-description">Technology-focused news layout with modern UI elements and dark theme options.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 3/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 3/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 4 - Business News</div>
+            <div class="template-description">Professional business news layout with financial data integration support.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 4/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 4/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 5 - Sports Central</div>
+            <div class="template-description">Sports-focused layout with score displays and team information sections.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 5/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 5/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 6 - Lifestyle Blog</div>
+            <div class="template-description">Lifestyle and entertainment news with image-rich content display.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 6/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 6/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 7 - Crypto News</div>
+            <div class="template-description">Cryptocurrency and blockchain news with price trackers and market data.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 7/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 7/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 8 - Local News</div>
+            <div class="template-description">Community-focused local news layout with event calendars and local business features.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 8/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 8/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="template-title">Site 9 - Breaking News</div>
+            <div class="template-description">Fast-paced breaking news layout with real-time updates and alert systems.</div>
+            <div class="template-actions">
+                <a href="base-layouts/Site 9/index.html" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="base-layouts/Site 9/" class="btn btn-secondary">View Code</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <h3>Coming Soon</h3>
+        <p>More templates will be added to reach our goal of 1000+ news website templates</p>
+        <p><strong>Categories:</strong> Political, International, Weather, Health, Entertainment, and more</p>
+    </div>
+</body>
+</html>

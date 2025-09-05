@@ -7,21 +7,15 @@ This document outlines the coding standards, conventions, and best practices for
 ### Directory Structure
 ```
 Site X/
-├── index.html              # Main template file
+├── index.html              # Main homepage template
+├── article.html            # Article page template
 ├── css/
-│   ├── style.css          # Main stylesheet
-│   ├── responsive.css     # Media queries (if separate)
-│   └── components/        # Component-specific styles (optional)
+│   ├── common.css         # Shared styles across all pages
+│   ├── index.css          # Homepage-specific styles
+│   └── article.css        # Article page-specific styles
 ├── js/
-│   ├── main.js           # Main JavaScript file
-│   └── components/       # Component-specific scripts (optional)
-├── images/
-│   ├── hero/             # Hero/banner images
-│   ├── articles/         # Article thumbnails
-│   └── ui/               # UI elements (icons, logos)
-├── assets/               # Other assets (fonts, etc.)
-├── README.md             # Template documentation
-└── preview.png           # Template screenshot (1200x800px)
+│   └── index.js           # Main JavaScript file
+└── screenshot.png         # Template preview image (1200x800px)
 ```
 
 ### File Naming Conventions

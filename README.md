@@ -10,45 +10,54 @@ Building towards **1000+ professional news website templates** covering every ca
 
 ```
 news-templates/
-├── base-layouts/            # Core base templates (currently 9)
-│   ├── Site 1/             # Classic News Layout
-│   ├── Site 2/             # Modern Magazine Style
-│   ├── Site 3/             # Tech Focus Layout
-│   ├── Site 4/             # Business News
-│   ├── Site 5/             # Sports Central
-│   ├── Site 6/             # Lifestyle Blog
-│   ├── Site 7/             # Crypto News
-│   ├── Site 8/             # Local News
-│   └── Site 9/             # Breaking News
-├── templates/               # Final production templates
-├── assets/                  # Shared resources (images, fonts, icons)
-├── docs/                    # Documentation
-│   ├── template-guide.md    # Template creation guide
-│   └── coding-standards.md  # Code standards and best practices
-├── index.html               # Master preview page
-├── CONTRIBUTING.md          # Contributor guidelines
-└── README.md               # This file
+├── base-layouts/                # Core base templates (currently 9)
+│   ├── base-template-1/        # Classic News Layout
+│   ├── base-template-2/        # Modern Magazine Style
+│   ├── base-template-3/        # Tech Focus Layout
+│   ├── base-template-4/        # Business News
+│   ├── base-template-5/        # Sports Central
+│   ├── base-template-6/        # Lifestyle Blog
+│   ├── base-template-7/        # Crypto News
+│   ├── base-template-8/        # Local News
+│   └── base-template-9/        # Breaking News
+├── templates/                   # Final production templates
+│   ├── biraj/                  # Team member templates
+│   ├── dipesh/                 # Team member templates
+│   └── inough/                 # Team member templates
+├── docs/                        # Documentation
+│   ├── template-guide.md       # Template creation guide
+│   └── coding-standards.md     # Code standards and best practices
+├── index.html                   # Master preview page
+├── CONTRIBUTING.md              # Contributor guidelines
+└── README.md                   # This file
 ```
 
 ## 🚀 Quick Start
 
 1. **Browse Templates**: Open `index.html` in your browser to see all available templates
-2. **Use a Template**: Copy any template from `base-layouts/` to start your project
-3. **Preview Individual Templates**: Navigate to any Site folder and open its `index.html`
+2. **Use a Base Template**: Copy any template from `base-layouts/` to start your project
+3. **Preview Individual Templates**: Navigate to any base-template folder and open its `index.html`
+4. **Team Templates**: Check the `templates/` folder for specialized variations by team members
 
 ## 📋 Current Templates
 
 ### Base Layouts (9 templates)
 
-1. **Site 1 - Classic News**: Traditional newspaper-style layout
-2. **Site 2 - Modern Magazine**: Contemporary magazine-style grid layout
-3. **Site 3 - Tech Focus**: Technology news with modern UI elements
-4. **Site 4 - Business News**: Professional business and financial news layout
-5. **Site 5 - Sports Central**: Sports-focused with score displays
-6. **Site 6 - Lifestyle Blog**: Image-rich lifestyle and entertainment layout
-7. **Site 7 - Crypto News**: Cryptocurrency news with market data integration
-8. **Site 8 - Local News**: Community-focused local news layout
-9. **Site 9 - Breaking News**: Real-time breaking news with alerts
+1. **Base Template 1 - Classic News**: Traditional newspaper-style layout
+2. **Base Template 2 - Modern Magazine**: Contemporary magazine-style grid layout
+3. **Base Template 3 - Tech Focus**: Technology news with modern UI elements
+4. **Base Template 4 - Business News**: Professional business and financial news layout
+5. **Base Template 5 - Sports Central**: Sports-focused with score displays
+6. **Base Template 6 - Lifestyle Blog**: Image-rich lifestyle and entertainment layout
+7. **Base Template 7 - Crypto News**: Cryptocurrency news with market data integration
+8. **Base Template 8 - Local News**: Community-focused local news layout
+9. **Base Template 9 - Breaking News**: Real-time breaking news with alerts
+
+### Team Development Templates
+
+- **Biraj's Templates**: Individual template variations and customizations
+- **Dipesh's Templates**: Individual template variations and customizations  
+- **Inough's Templates**: Individual template variations and customizations
 
 ## ✨ Features
 
@@ -58,16 +67,19 @@ news-templates/
 - 🔧 **Easy Customization**: Well-structured HTML/CSS for easy modification
 - 📊 **SEO Friendly**: Semantic HTML structure for better search engine visibility
 
-## 🎨 Template Categories (Planned)
 
-- **General News**: Breaking news, world news, national news
-- **Business**: Financial news, market updates, business analysis
-- **Technology**: Tech news, gadget reviews, software updates
-- **Sports**: Game coverage, scores, team news, athlete profiles
-- **Entertainment**: Celebrity news, movies, music, TV shows
-- **Lifestyle**: Health, travel, food, fashion
-- **Local News**: Community news, local events, weather
-- **Specialized**: Politics, science, environment, education
+## 👥 Team Structure
+
+This project is developed by a **4-member team**:
+- 1 Team Lead
+- 2 Developers 
+- 1 QA/Documentation Specialist
+
+### Development Workflow
+- Each template is developed in its own branch (`template/001`, `template/002`, etc.)
+- Templates are built in `/templates/template-###` format
+- Pull requests are made to `develop` branch for QA validation
+- After approval, changes are merged to `main` branch
 
 ## 🛠️ Technical Requirements
 
@@ -75,6 +87,7 @@ news-templates/
 - No external dependencies required
 - Pure HTML5, CSS3, and vanilla JavaScript
 - Responsive design using CSS Grid and Flexbox
+- Semantic HTML structure following WCAG accessibility principles
 
 ## 📝 Usage License
 
@@ -109,7 +122,3 @@ For questions, suggestions, or issues:
 - Check out existing templates for examples
 
 ---
-
-**Last Updated**: September 2025  
-**Templates Count**: 9 base layouts  
-**Target**: 1000 templates

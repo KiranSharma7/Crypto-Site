@@ -44,26 +44,16 @@ We're building towards **1000+ professional news website templates**. Every cont
 ### Required Files for Each Template
 ```
 Site X/
-├── index.html           # Main template file
+├── index.html           # Main homepage template
+├── article.html         # Article page template
 ├── css/
-│   ├── style.css       # Main stylesheet
-│   └── responsive.css  # Media queries (optional)
+│   ├── common.css      # Shared styles across all pages
+│   ├── index.css       # Homepage-specific styles
+│   └── article.css     # Article page-specific styles
 ├── js/
-│   └── script.js       # JavaScript functionality (optional)
-├── images/             # Template-specific images
-├── README.md           # Template-specific documentation
-└── preview.png         # Screenshot for preview (1200x800px)
+│   └── index.js        # JavaScript functionality
+└── screenshot.png      # Template preview image (1200x800px)
 ```
-
-### Template Categories
-- **General News**: World news, breaking news, daily news
-- **Business**: Financial, markets, economy, corporate
-- **Technology**: Tech news, gadgets, software, AI
-- **Sports**: Games, scores, teams, athlete profiles
-- **Entertainment**: Movies, music, celebrity, TV
-- **Lifestyle**: Health, travel, food, fashion, wellness
-- **Local News**: Community, weather, events, government
-- **Specialized**: Politics, science, education, environment
 
 ## 🎨 Design Standards
 
@@ -75,9 +65,9 @@ Site X/
 - **Accessibility**: Proper contrast ratios, semantic HTML, alt tags
 
 ### Layout Guidelines
-- **Header**: Logo, navigation, search functionality
+- **Header**: Logo, navigation
 - **Main Content**: Article listings, featured stories, sidebar
-- **Footer**: Links, copyright, contact information
+- **Footer**: Links, copyright,
 - **Typography**: Readable fonts, proper hierarchy, good line spacing
 - **Color Scheme**: Professional colors appropriate for news
 
@@ -155,16 +145,6 @@ Examples:
 ## Description
 Brief description of changes made.
 
-## Template Category
-- [ ] General News
-- [ ] Business
-- [ ] Technology
-- [ ] Sports
-- [ ] Entertainment
-- [ ] Lifestyle
-- [ ] Local News
-- [ ] Specialized
-
 ## Changes Made
 - List key changes
 - Include any new features
@@ -183,24 +163,6 @@ Brief description of changes made.
 Any additional context or notes for reviewers.
 ```
 
-## 🎨 Asset Guidelines
-
-### Images
-- **Format**: Use WebP when possible, fallback to JPG/PNG
-- **Size**: Optimize for web (typically under 200KB per image)
-- **Dimensions**: Provide multiple sizes when needed
-- **Alt Text**: Always include descriptive alt text
-- **Stock Photos**: Only use royalty-free or properly licensed images
-
-### Icons
-- **Format**: SVG preferred for scalability
-- **Consistency**: Use similar style/weight across the template
-- **Size**: Optimize SVG code (remove unnecessary elements)
-
-### Fonts
-- **Web Fonts**: Use Google Fonts or other free web fonts
-- **Performance**: Limit to 2-3 font families maximum
-- **Fallbacks**: Always provide system font fallbacks
 
 ## 🔍 Code Review Process
 

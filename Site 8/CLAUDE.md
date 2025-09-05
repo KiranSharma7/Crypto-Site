@@ -58,3 +58,4 @@ You are an expert developer in HTML and CSS, focusing on best practices, accessi
 - Always use variable for styles.
 - Never add author related info
 - add links to every article
+- Always Prfer light theme instead of dark for a site.
